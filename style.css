@@ -9,32 +9,35 @@
 
 body{
     width: 100%;
-    background: linear-gradient(145deg, #0f76b5, #1288cd, #005f7a, #014455);
-    min-height: 100%;
-    color: blanchedalmond;
+    
+
+}
+
+.wrapper{
+    background-color: rgba(255, 255, 255, 0.363);
 }
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2vw;
+    position: sticky;
+    top: 0;
     
-    border-bottom: 3px solid black;
+    z-index: 1000;
+    background-color: red;
 }
 
 nav .left img{
-    height: 8vw;
-    width: 8vw;
-    padding-left: 2vw;
-    padding-top: 2vw;
+    height: 100px;
+    width: auto
+    
 }
 
 nav .right{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10vw;
-    padding-left: 2vw;
-    padding-top: 2vw;
-    padding-right: 2vw;
+    gap: 4vw;
 }
