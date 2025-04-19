@@ -1,0 +1,15 @@
+@media (max-width: 600px){
+    
+    nav .left img{
+    height: 7vh;
+    width: auto;
+    }
+    nav .right h4{
+        display: none;
+    }
+
+    nav i{
+        display: block;
+        
+    }
+}
