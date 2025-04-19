@@ -16,9 +16,7 @@ body {
 }
 
 
-.wrapper{
-    background-color: rgba(255, 255, 255, 0.363);
-}
+
 
 nav {
     display: flex;
@@ -33,7 +31,7 @@ nav {
 }
 
 nav .left img{
-    height: 80px;
+    height: 6vw;
     width: auto
     
 }
@@ -43,7 +41,19 @@ nav .right{
     align-items: center;
     justify-content: center;
     gap: 4vw;
-    color: rgb(112, 112, 188);
+    color: rgb(7, 39, 73);
+    font-size: 1.3vw;
+}
+
+nav .right h4:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav .right i{
+    font-size: 1.3vw;
+    font-weight: bolder;
+    display: none;
 }
 
 
@@ -53,14 +63,55 @@ nav .right{
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: space-around;
-     color: blue;
+     justify-content: center;
+     color: wheat;
      text-align: center;
      padding: 20px;
+     gap: 20px;
+     background-color: rgb(26, 76, 131);
+}
+
+.hero .headline{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.hero  h1{
+    font-size: 7vw;
+    margin-bottom: 10px;
+}
+
+.hero h3{
+    font-size: 2vw;
+    margin-top: 0px;
+}
+
+.hero .quote{
+    width: fit-content;
+    overflow: hidden;
 }
 
 
-.hero h1{
-    font-size: 7vw;
-    background-color: red;
+.hero .quote{
+    margin-top: 0;
+    
+}
+
+.hero button{
+    padding: 01vw 5vw;
+    font-weight: bolder;
+    font-size: 1.2vw;
+    color: aliceblue;
+    background-color: rgb(7, 39, 73);
+    border-radius: 2vw;
+    border: none;
+    margin-top: 4vw;
+    transition: ease-out 0.5s;
+}
+
+.hero button:hover{
+    cursor: pointer;
+    color: rgb(7, 39, 73);
+    background-color: aliceblue;
+    transition: ease-in 0.5s;
 }
