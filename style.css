@@ -9,6 +9,7 @@
 
 html, body {
     height: 100%;
+    
 }
 
 body {
@@ -131,4 +132,22 @@ nav a:visited{
     color: rgb(7, 39, 73);
     background-color: aliceblue;
     transition: ease-in 0.5s;
+}
+
+.about{
+    width: 100%;
+    height: auto;
+    
+}
+
+.about h3{
+    font-size: 4vw;
+    margin: 3vw 6vw;
+    margin-bottom: 1vw;
+    color: blue;
+}
+
+.about p{
+    padding: 2vw 5vw;
+    font-size: 2.3vw;
 }
