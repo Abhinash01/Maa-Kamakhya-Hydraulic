@@ -1,18 +1,45 @@
 @media (max-width: 600px){
-    
-    nav .left img{
-    height: 7vh;
-    width: auto;
+    *{
+        -webkit-tap-highlight-color: transparent;
     }
+
+    nav {
+        height: 60px;
+        padding: 0 4vw;
+    }
+
+    nav .left img{
+    height: 5vh;
+    width: auto;
+    padding-top: 10px;
+    }
+
+
+
     nav .right h4{
         display: none;
     }
 
-    nav i{
+    nav .right i {
         display: block;
+        font-size: 6vw;
+        position: absolute;
+        right: 30px;
+        top: 14px;
+        
     }
 
     .hero h1{
         font-size: 4vh;
+    }
+
+    .hero h3{
+        font-size: 2vh;
+    }
+
+    .hero button{
+        padding: 2vh 5vh;
+        font-size: 2vh;
+        margin-top: 100px;
     }
 }
