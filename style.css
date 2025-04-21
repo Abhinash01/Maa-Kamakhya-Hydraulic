@@ -58,8 +58,9 @@ nav .left img{
 nav i {
     font-size: 2vw;
     font-weight: bolder;
-    display: none;
     color: #f8f8f2;
+    display: block; 
+    cursor: pointer;
 }
 
 
@@ -68,7 +69,7 @@ nav .right{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw;
+    gap: 1vw;
     color: rgb(7, 39, 73);
     font-size: 1.3vw;
     text-decoration: none;
@@ -78,15 +79,16 @@ nav .right a{
     text-decoration: none;
 }
 
-nav .right h4:hover{
-    text-decoration: underline;
-    cursor: pointer;
+nav .right h4 {
+    display: none;
 }
+
+
 
 nav .right i{
     font-size: 1.3vw;
     font-weight: bolder;
-    display: none;
+    
 }
 
 nav .right h4,
@@ -95,26 +97,42 @@ nav a:visited {
 }
 
 .mobile-nav {
-    display: none;
-    flex-direction: column;
     position: fixed;
     top: 80px;
-    right: 0;
-    width: 100%;
+    right: -250px; /* Hidden initially */
+    width: 200px;
     background-color: var(--bg-color);
-    padding: 2vw 4vw;
+    padding: 1.5vw;
     z-index: 9999;
-    gap: 3vw;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none; 
 }
+
+.mobile-nav.show {
+    right: 20px; /* Slides in */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 
 .mobile-nav a {
     color: var(--text-color);
-    font-size: 5vw;
+    font-size: 1rem;
+    padding: 0.8vw 0;
+    border: none;
     text-decoration: none;
     border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 2vw;
+    padding-bottom: 1vw; /* reduced from 2vw */
 }
+
 
 .mobile-nav.show {
     display: flex;
@@ -212,6 +230,67 @@ nav a:visited {
     color: rgb(122, 122, 203);
 }
 
+.client{
+    padding: 5vw;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.client h3 {
+    font-size: 3vw;
+    color: var(--accent-color);
+    margin-bottom: 2vw;
+    text-decoration: underline;
+}
+
+.client img{
+    width: 80%;
+    height: 80vh;
+    object-fit: fill;
+}
+
+.gallery {
+    padding: 5vw;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.gallery h3 {
+    font-size: 3vw;
+    color: var(--accent-color);
+    margin-bottom: 2vw;
+    text-decoration: underline;
+}
+
+
+.gallery .images {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 2vw; 
+    margin-top: 2vw;
+}
+
+
+.gallery .images img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 15px;
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1; 
+}
+
+
+.gallery .images img:nth-child(odd) {
+    aspect-ratio: 1.5; 
+}
+
+
+
+.gallery .images img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
 .contact {
     padding: 5vw;
     text-align: center;
@@ -259,3 +338,20 @@ nav a:visited {
 .cta i {
     font-size: 1.5vw;
 }
+
+footer {
+    background-color: #0e0e52; /* Brand dark */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+ 
+  
