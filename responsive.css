@@ -1,5 +1,5 @@
-@media (max-width: 600px){
-    *{
+@media (max-width: 600px) {
+    * {
         -webkit-tap-highlight-color: transparent;
     }
 
@@ -8,15 +8,13 @@
         padding: 0 4vw;
     }
 
-    nav .left img{
-    height: 5vh;
-    width: auto;
-    padding-top: 10px;
+    nav .left img {
+        height: 5vh;
+        width: auto;
+        padding-top: 10px;
     }
 
-
-
-    nav .right h4{
+    nav .right h4 {
         display: none;
     }
 
@@ -26,20 +24,59 @@
         position: absolute;
         right: 30px;
         top: 14px;
-        
     }
 
-    .hero h1{
+    .hero h1 {
         font-size: 4vh;
     }
 
-    .hero h3{
+    .hero h3 {
         font-size: 2vh;
     }
 
-    .hero button{
+    .hero button {
         padding: 2vh 5vh;
         font-size: 2vh;
         margin-top: 100px;
+    }
+
+    .about h3 {
+        font-size: 5vw;
+        margin: 10vw 0 4vw;
+        text-align: center;
+    }
+
+    .about p {
+        font-size: 4vw;
+        padding: 0 6vw 6vw;
+        text-align: justify;
+    }
+
+    .contact h3 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+
+    .contact p {
+        font-size: 3.5vw;
+        margin-bottom: 5vw;
+        padding: 0 4vw;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 4vw;
+        align-items: center;
+    }
+
+    .cta {
+        font-size: 4vw;
+        padding: 3vw 5vw;
+        border-radius: 6vw;
+    }
+
+    .cta i {
+        font-size: 4.5vw;
     }
 }
