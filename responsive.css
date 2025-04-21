@@ -26,22 +26,54 @@
         top: 14px;
     }
 
+    .mobile-nav {
+        position: fixed;
+        top: 60px;
+        right: -250px;
+        width: 180px;
+        background-color: var(--bg-color);
+        padding: 4vw 3vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .mobile-nav.show {
+        right: 20px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .mobile-nav a {
+        font-size: 4vw;
+        padding-bottom: 2vw;
+        border-bottom: 1px solid var(--accent-color);
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
     .hero h1 {
-        font-size: 4vh;
+        font-size: 5vh;
     }
 
     .hero h3 {
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 
     .hero button {
-        padding: 2vh 5vh;
-        font-size: 2vh;
-        margin-top: 100px;
+        padding: 2vh 6vh;
+        font-size: 2.2vh;
+        margin-top: 8vh;
     }
 
     .about h3 {
-        font-size: 5vw;
+        font-size: 6vw;
         margin: 10vw 0 4vw;
         text-align: center;
     }
@@ -52,14 +84,38 @@
         text-align: justify;
     }
 
-    .contact h3 {
-        font-size: 5vw;
+    .client h3 {
+        font-size: 6vw;
         margin-bottom: 4vw;
     }
 
-    .contact p {
-        font-size: 3.5vw;
+    .client img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery h3 {
+        font-size: 6vw;
+        margin-bottom: 4vw;
+    }
+
+    .gallery .images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+    }
+
+    .gallery .images img {
+        aspect-ratio: 1;
+    }
+
+    .contact h3 {
+        font-size: 6vw;
         margin-bottom: 5vw;
+    }
+
+    .contact p {
+        font-size: 4vw;
+        margin-bottom: 6vw;
         padding: 0 4vw;
         text-align: center;
     }
@@ -72,11 +128,11 @@
 
     .cta {
         font-size: 4vw;
-        padding: 3vw 5vw;
+        padding: 3vw 6vw;
         border-radius: 6vw;
     }
 
     .cta i {
-        font-size: 4.5vw;
+        font-size: 5vw;
     }
 }
