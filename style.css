@@ -136,15 +136,15 @@ nav a:visited {
     color: var(--bg-color);
     border-radius: 2vw;
     border: none;
-    margin-top: 4vw;
-    transition: ease-out 0.5s;
+    margin-top: 2vw;
+   
 }
 
 .hero button:hover{
     cursor: pointer;
     background-color: var(--text-color);
     color: var(--bg-color);
-    transition: ease-in 0.5s;
+    
 }
 
 .about{
