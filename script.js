@@ -15,4 +15,19 @@ function head(){
     })
 }
 
+
+const menuIcon = document.querySelector("nav .ri-menu-3-line");
+const mobileNav = document.getElementById("mobileNav");
+
+menuIcon.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+});
+
+document.querySelectorAll('#mobileNav a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('show');
+    });
+});
+
+
 head();
