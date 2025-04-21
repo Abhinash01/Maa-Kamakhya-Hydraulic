@@ -7,6 +7,7 @@
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -30,8 +31,55 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    gap: 20px;
+    text-align: center;
+  }
+  
+
+  
+  .loader img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    position: absolute;
+    z-index: 2;
+    animation: fadeIn 1.2s ease-in-out infinite alternate;
+  }
+  
+
+  
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0.6; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fadeText {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  
+
 .wrapper {
-    padding-top: 80px; /* same as nav height */
+    padding-top: 80px; 
 }
 
 
@@ -99,7 +147,7 @@ nav a:visited {
 .mobile-nav {
     position: fixed;
     top: 80px;
-    right: -250px; /* Hidden initially */
+    right: -250px; 
     width: 200px;
     background-color: var(--bg-color);
     padding: 1.5vw;
@@ -115,8 +163,13 @@ nav a:visited {
     pointer-events: none; 
 }
 
+#mobileNav .ri-close-line {
+    font-size: 2vw;
+    align-self: flex-end;
+    cursor: pointer;
+}
 .mobile-nav.show {
-    right: 20px; /* Slides in */
+    right: 20px; 
     opacity: 1;
     pointer-events: auto;
 }
@@ -130,7 +183,7 @@ nav a:visited {
     border: none;
     text-decoration: none;
     border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 1vw; /* reduced from 2vw */
+    padding-bottom: 1vw; 
 }
 
 
@@ -230,24 +283,7 @@ nav a:visited {
     color: rgb(122, 122, 203);
 }
 
-.client{
-    padding: 5vw;
-    text-align: center;
-    color: var(--text-color);
-}
 
-.client h3 {
-    font-size: 3vw;
-    color: var(--accent-color);
-    margin-bottom: 2vw;
-    text-decoration: underline;
-}
-
-.client img{
-    width: 80%;
-    height: 80vh;
-    object-fit: fill;
-}
 
 .gallery {
     padding: 5vw;
@@ -262,35 +298,85 @@ nav a:visited {
     text-decoration: underline;
 }
 
+.imgprod{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2vw;
+    padding: 5vw;
+    text-align: center;
+}
+
+.products h3 {
+    font-size: 3vw;
+    color: var(--accent-color); /* Accent color for contrast */
+    margin-bottom: 3vw;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Rubik', sans-serif;
+}
+
+.product-card {
+    background-color: #1e2a47;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card p {
+    margin-top: 1.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover p {
+    color: var(--accent-color);
+}
+
 
 .gallery .images {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 2vw; 
-    margin-top: 2vw;
-}
-
-
-.gallery .images img {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    
+    grid-auto-rows: 200px;
+    gap: 2vw;
+    margin: 2vw 0; 
+  }
+  
+  .gallery .images img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
+    object-fit: cover;       
     border-radius: 15px;
-    object-fit: cover; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 1; 
-}
-
-
-.gallery .images img:nth-child(odd) {
-    aspect-ratio: 1.5; 
-}
-
-
-
-.gallery .images img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-}
+  }
+  
+  .gallery .images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
 .contact {
     padding: 5vw;
     text-align: center;
@@ -340,7 +426,7 @@ nav a:visited {
 }
 
 footer {
-    background-color: #0e0e52; /* Brand dark */
+    background-color: #0e0e52; 
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -353,5 +439,52 @@ footer {
     padding: 0 20px;
   }
   
- 
+  #backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;             
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.3s;
+    z-index: 1000;
+  }
   
+  #backToTop.show {
+    display: flex;
+    opacity: 1;
+  }
+  
+  #backToTop:hover {
+    opacity: 0.8;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    border: 3px solid var(--bg-color);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4b4b; 
+  }
+  
+
