@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+:root {
+    --bg-color: #0a192f;
+    --text-color: #f8f8f2;
+    --accent-color: #ff6b6b;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +16,15 @@
 
 html, body {
     height: 100%;
-    
+    background-color: var(--bg-color);
+    scroll-padding-top: 80px;
 }
 
 body {
     width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -29,6 +40,7 @@ nav {
     height: 80px;
     z-index: 1000;
     width: 100%;
+    background-color: var(--bg-color);
 }
 
 nav .left img{
@@ -70,9 +82,9 @@ nav .right i{
     display: none;
 }
 
-nav a:visited{
-    color: rgb(7, 39, 73);
-    
+nav .right h4,
+nav a:visited {
+    color: var(--text-color);
 }
 
 .hero {
@@ -86,7 +98,8 @@ nav a:visited{
      text-align: center;
      padding: 20px;
      gap: 20px;
-     background-color: rgb(26, 76, 131);
+     background-color: var(--bg-color);
+     color: var(--text-color);
 }
 
 .hero .headline{
@@ -119,8 +132,8 @@ nav a:visited{
     padding: 01vw 5vw;
     font-weight: bolder;
     font-size: 1.2vw;
-    color: aliceblue;
-    background-color: rgb(7, 39, 73);
+    background-color: var(--accent-color);
+    color: var(--bg-color);
     border-radius: 2vw;
     border: none;
     margin-top: 4vw;
@@ -129,25 +142,86 @@ nav a:visited{
 
 .hero button:hover{
     cursor: pointer;
-    color: rgb(7, 39, 73);
-    background-color: aliceblue;
+    background-color: var(--text-color);
+    color: var(--bg-color);
     transition: ease-in 0.5s;
 }
 
 .about{
     width: 100%;
-    height: auto;
+    height: 100%;
     
 }
 
 .about h3{
-    font-size: 4vw;
-    margin: 3vw 6vw;
-    margin-bottom: 1vw;
-    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    margin: 7vw 6vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: var(--accent-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
 }
 
 .about p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
     padding: 2vw 5vw;
+    color: var(--text-color);
     font-size: 2.3vw;
+}
+
+.about p strong{
+    color: rgb(122, 122, 203);
+}
+
+.contact {
+    padding: 5vw;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.contact h3 {
+    font-size: 3vw;
+    color: var(--accent-color);
+    margin-bottom: 2vw;
+    text-decoration: underline;
+}
+
+.contact p {
+    font-size: 1.8vw;
+    margin-bottom: 3vw;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 1vw 2.5vw;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.cta i {
+    font-size: 1.5vw;
 }
